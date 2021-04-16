@@ -16,6 +16,7 @@
     </parent>
     <modules>
         <module>springBoot-RabbitMq</module>
+        <module>SpringBoot-MyBatis-Advances</module>
     </modules>
 
     <properties>
