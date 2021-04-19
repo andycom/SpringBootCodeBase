@@ -1,0 +1,8 @@
+server:
+  servlet:
+    application-display-name: report
+spring:
+  application:
+    name: springboot-report
+
+

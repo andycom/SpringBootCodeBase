@@ -17,6 +17,7 @@
     <modules>
         <module>springBoot-RabbitMq</module>
         <module>SpringBoot-MyBatis-Advances</module>
+        <module>springBoot-Report</module>
     </modules>
 
     <properties>
