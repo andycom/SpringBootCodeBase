@@ -47,7 +47,7 @@ public class SpringExcelExportTool {
 
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Disposition",
-                    "attachment; filename=" + URLEncoder.encode(fileName, "UTF-8") + ".xlsx");
+                    "attachment; filename=" + URLEncoder.encode(fileName, "UTF-8") + ".xls");
             HttpStatus statusCode = HttpStatus.OK;
             ResponseEntity<byte[]> entity = new ResponseEntity<byte[]>(createWorkbook(workbook), headers, statusCode);
             return entity;
@@ -77,7 +77,7 @@ public class SpringExcelExportTool {
             workbook.write(output);
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Disposition",
-                    "attachment; filename=" + URLEncoder.encode(fileName, "UTF-8") + ".xlsx");
+                    "attachment; filename=" + URLEncoder.encode(fileName, "UTF-8") + ".xls");
             headers.add("Set-Cookie", "fileDownload=true;path=/");
             HttpStatus statusCode = HttpStatus.OK;
             ResponseEntity<byte[]> entity = new ResponseEntity<byte[]>(output.toByteArray(), headers, statusCode);
