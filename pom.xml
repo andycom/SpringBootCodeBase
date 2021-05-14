@@ -19,6 +19,7 @@
         <module>SpringBoot-MyBatis-Advances</module>
         <module>springBoot-Report</module>
         <module>SpringBoot-Redis</module>
+        <module>springBoot-zookeeper</module>
     </modules>
 
     <properties>
