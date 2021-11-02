@@ -148,7 +148,7 @@ public class ZkApi {
         try {
 
             // 根据节点路径和事件类型做不同的业务的处理
-            if ("/".equals(path) && Watcher.Event.EventType.NodeChildrenChanged.equals(watcherApi.getType())) {
+            if ("/".equals(path) && Watcher.Event.EventType.NodeChildrenChanged.equals(watcherApi)) {
 
                 // 获取数据, 并继续监控
                 List<String> children = zkClient.getChildren("/", true);
