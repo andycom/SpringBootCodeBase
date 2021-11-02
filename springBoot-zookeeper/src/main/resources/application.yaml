@@ -1,0 +1,12 @@
+server:
+  http2:
+    enabled: true
+  compression:
+    enabled: true
+zookeeper:
+  address: 127.0.0.1:2181
+  timeout: 4000
+
+
+
+
