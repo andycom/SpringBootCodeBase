@@ -1,5 +1,6 @@
 package com.fancv.redis.redis;
 
+
 import org.springframework.data.redis.connection.DataType;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
@@ -414,7 +415,6 @@ public class RedisImpl implements Redis {
      * @param key    key
      * @param tuples tuples
      */
-    @Override
     public void zadd(String key, Set<ZSetOperations.TypedTuple<Object>> tuples) {
         redisTemplate.opsForZSet().add(key, tuples);
     }
