@@ -21,6 +21,8 @@
         <module>SpringBoot-Redis</module>
         <module>springBoot-zookeeper</module>
         <module>springBoot-RocketMq</module>
+        <module>SpringBoot-Redission</module>
+        <module>SpringBoot-AOP</module>
     </modules>
 
     <properties>
