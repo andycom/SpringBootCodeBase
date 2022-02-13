@@ -1,0 +1,3 @@
+com.fancv.shardingdemo.keygen.SidKeyGenerator
+com.fancv.shardingdemo.keygen.SnowflakeKeyGenerator
+com.fancv.shardingdemo.keygen.UUIDKeyGenerator

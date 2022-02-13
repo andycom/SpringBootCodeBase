@@ -23,6 +23,7 @@
         <module>springBoot-RocketMq</module>
         <module>SpringBoot-Redission</module>
         <module>SpringBoot-AOP</module>
+        <module>springBoot-ShardingJDBC</module>
     </modules>
 
     <properties>

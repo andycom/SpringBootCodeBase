@@ -1,0 +1,11 @@
+server:
+  servlet:
+    application-display-name: springBoot-aop
+  port: 9092
+spring:
+  application:
+    name: springboot-aop
+
+
+
+
