@@ -14,3 +14,7 @@ SpringBootCodeBase.iml
 /springBoot-RocketMq/target/
 /springBoot-zookeeper/target/
 /SpringBoot-Redission/target/
+/SpringBoot-AOP/target/
+/SpringBoot-LTS/target/
+/logs/
+/springBoot-ShardingJDBC/target/
