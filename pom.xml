@@ -24,6 +24,7 @@
         <module>SpringBoot-Redission</module>
         <module>SpringBoot-AOP</module>
         <module>springBoot-ShardingJDBC</module>
+        <module>SpringBoot-LTS</module>
     </modules>
 
     <properties>
@@ -42,6 +43,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>2.3.9.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
