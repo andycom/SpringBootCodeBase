@@ -1,0 +1,14 @@
+server:
+  servlet:
+    application-display-name: Rocket-Consumer
+  port: 9021
+spring:
+  application:
+    name: springboot-rocketMq-Consumer
+
+
+rocketmq:
+  name-server: 192.168.0.23:9876
+  consumer:
+    group: consumer-group-1
+

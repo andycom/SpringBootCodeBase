@@ -1,14 +1,13 @@
-package com.fancv;
+package com.ty.mq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * Hello world!
- */
 @SpringBootApplication
-public class SpringBootRocketMqApp {
+public class MqProducerApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootRocketMqApp.class, args);
+        SpringApplication.run(MqProducerApplication.class, args);
     }
+
 }
