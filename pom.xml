@@ -27,6 +27,7 @@
         <module>springBoot-rocketMQ-consumer</module>
         <module>Springboot-RocketMq-producer</module>
         <module>SpringBoot-rocketMQ-producer</module>
+        <module>SpringBoot-mybatis-plus</module>
 
     </modules>
 
