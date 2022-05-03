@@ -13,7 +13,6 @@ import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.type.JdbcType;
 import org.mybatis.spring.transaction.SpringManagedTransactionFactory;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,8 +20,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -107,7 +104,6 @@ public class DataSourceConfig {
     }
 
 
-
     @ConfigurationProperties(prefix = "spring.datasource")
     @Bean(name = "db1")// application.properteis中对应属性的前缀
     public DataSource dataSource() throws SQLException {
@@ -125,6 +121,7 @@ public class DataSourceConfig {
 
         return druidDataSource;
     }
+
     @Bean(name = "db2")
     @ConfigurationProperties(prefix = "spring.datasource.db2") // application.properteis中对应属性的前缀
     public DataSource dataSource2() {
@@ -188,6 +185,7 @@ public class DataSourceConfig {
 
     /**
      * mybatis-plus sqlSessionFactory config
+     *
      * @param ds
      * @param globalConfig
      * @return
@@ -197,23 +195,23 @@ public class DataSourceConfig {
     @Primary
     public SqlSessionFactory sqlSessionFactory(@Qualifier("db1") DataSource ds, @Qualifier("globalConfig") GlobalConfig globalConfig) throws Exception {
         MybatisSqlSessionFactoryBean factoryBean = new MybatisSqlSessionFactoryBean();
-        factoryBean.setPlugins(new Interceptor[]{mybatisPlusInterceptor,sqlPrintInterceptor});
+        factoryBean.setPlugins(new Interceptor[]{mybatisPlusInterceptor, sqlPrintInterceptor});
         factoryBean.setDataSource(ds);
-        
+
         MybatisConfiguration configuration = new MybatisConfiguration();
         configuration.setDefaultScriptingLanguage(MybatisXMLLanguageDriver.class);
         configuration.setJdbcTypeForNull(JdbcType.NULL);
         factoryBean.setConfiguration(configuration);
         factoryBean.setTransactionFactory(new SpringManagedTransactionFactory());
         factoryBean.setGlobalConfig(globalConfig);
-        
+
         return factoryBean.getObject();
     }
-    
+
     @Bean("transactionManager")
     @Primary
     public DataSourceTransactionManager initDataSourceTransactionManager() throws SQLException {
-        
+
         return new DataSourceTransactionManager(dataSource());
     }
 
