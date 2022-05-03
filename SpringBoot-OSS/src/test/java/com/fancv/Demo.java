@@ -25,7 +25,7 @@ public class Demo {
         // 填写Bucket名称，例如examplebucket。
         String bucketName = "fancv-sys";
         // 填写Object完整路径，例如exampledir/exampleobject.txt。Object完整路径中不能包含Bucket名称。 按照orgId 年月日存储文件
-        String objectName = "exampledir3/1exampleobject.txt";
+        String objectName = "exampledir/5exampleobject.txt";
 
         // 创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);

@@ -6,6 +6,7 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 @Data
@@ -25,6 +26,7 @@ public class ossConfig {
 
 
     @Bean
+    @Scope("prototype")
     public OSS getOssObject(){
         // Endpoint以华东1（杭州）为例，其它Region请按实际情况填写。
         String endpoint = "https://oss-cn-zhangjiakou.aliyuncs.com";
@@ -37,7 +39,7 @@ public class ossConfig {
         String objectName = "exampledir3/1exampleobject.txt";
 
         // 创建OSSClient实例。
-        OSS ossClient = new OSSClientBuilder().build(rayOssKey,rayOssSecret, ossEndpoint);
+        OSS ossClient = new OSSClientBuilder().build(ossEndpoint,rayOssKey,rayOssSecret);
 
         return ossClient;
 
