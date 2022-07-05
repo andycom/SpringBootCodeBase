@@ -30,6 +30,7 @@
         <module>SpringBoot-mybatis-plus</module>
         <module>SpringBoot-OSS</module>
         <module>SpringBoot-Commons</module>
+        <module>SpringBoot-DynamicDataSource</module>
 
     </modules>
 

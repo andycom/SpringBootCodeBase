@@ -1,0 +1,4 @@
+com\fancv\App.class
+com\ray\sdk\config\ossConfig.class
+com\ray\sdk\OssUtil\RayOssUtil.class
+com\ray\sdk\OssUtil\GetTime.class
