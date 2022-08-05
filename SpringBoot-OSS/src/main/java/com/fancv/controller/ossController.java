@@ -1,6 +1,7 @@
 package com.fancv.controller;
 
 import com.fancv.service.OssService;
+import com.raycloud.sheji.dto.DamFileUpdateDto;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +23,7 @@ public class ossController {
     OssService ossService;
 
     @PostMapping("/file")
-    public String put(@RequestParam("file") MultipartFile file) throws IOException {
+    public DamFileUpdateDto put(@RequestParam("file") MultipartFile file) throws Exception {
 
         InputStream inputStream = file.getInputStream();
         String name = file.getOriginalFilename();
@@ -32,6 +33,6 @@ public class ossController {
     @PostMapping("/delete")
     public Boolean put(@RequestParam("key") String key) throws IOException {
 
-        return ossService.deleteObject(key);
+        return ossService.fileExist(key);
     }
 }

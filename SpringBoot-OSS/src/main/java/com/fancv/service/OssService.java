@@ -1,6 +1,7 @@
 package com.fancv.service;
 
-import com.ray.sdk.OssUtil.RayOssUtil;
+import com.raycloud.sheji.dto.DamFileUpdateDto;
+import com.raycloud.sheji.util.DamOpenOssUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,16 +12,21 @@ import java.io.InputStream;
 public class OssService {
 
     @Autowired
-    RayOssUtil rayOssUtil;
+    DamOpenOssUtils damOpenOssUtils;
 
-
-    public String putObject(String name, InputStream inputStream) throws IOException {
-
-        return rayOssUtil.putObject("exampledir/", "/" + name, inputStream);
+    public OssService() {
+        super();
     }
 
-    public Boolean deleteObject(String name) throws IOException {
+    public DamFileUpdateDto putObject(String name, InputStream inputStream) throws Exception {
 
-        return rayOssUtil.deleteObject(name);
+       return damOpenOssUtils.uploadFileAndThumbnailToOss("exampledir",name,inputStream,false);
+
+
+    }
+
+    public Boolean fileExist(String name) throws IOException {
+
+        return damOpenOssUtils.fileExist(name);
     }
 }

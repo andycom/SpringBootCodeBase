@@ -20,12 +20,12 @@ public class Demo {
         // Endpoint以华东1（杭州）为例，其它Region请按实际情况填写。
         String endpoint = "https://oss-cn-zhangjiakou.aliyuncs.com";
         // 阿里云账号AccessKey拥有所有API的访问权限，风险很高。强烈建议您创建并使用RAM用户进行API访问或日常运维，请登录RAM控制台创建RAM用户。
-        String accessKeyId = "LTAI5tDT2HxdMRBVV8pE1MNv";
-        String accessKeySecret = "1whvEgrT0t7jo2vJxi0QgmJ0aWnzyH";
+        String accessKeyId = "LTAI5t5sF7sXqD8by7p3RCRB";
+        String accessKeySecret = "mwTXDxnvGGO6V5YcMzp80q8a5oH67l";
         // 填写Bucket名称，例如examplebucket。
         String bucketName = "fancv-sys";
         // 填写Object完整路径，例如exampledir/exampleobject.txt。Object完整路径中不能包含Bucket名称。 按照orgId 年月日存储文件
-        String objectName = "exampledir/5exampleobject.txt";
+        String objectName = "exampledir/5.txt";
 
         // 创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
