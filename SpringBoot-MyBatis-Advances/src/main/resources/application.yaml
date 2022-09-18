@@ -2,6 +2,7 @@ spring:
   cache:
     redis:
       key-prefix: "sp:"
+      time-to-live: 800
     type: redis
   redis:
     port: 6379

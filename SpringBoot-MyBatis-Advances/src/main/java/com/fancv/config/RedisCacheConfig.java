@@ -66,12 +66,12 @@ public class RedisCacheConfig {
     }*/
 
 
-  /*  *//**
-     * Redis缓存管理器
+  /*  *
+     * 缓存管理器
      *
      * @param lettuceConnectionFactory
-     * @return
-     *//*
+     * @return*/
+
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory lettuceConnectionFactory) {
         RedisCacheConfiguration defaultCacheConfig = RedisCacheConfiguration.defaultCacheConfig();
@@ -99,7 +99,6 @@ public class RedisCacheConfig {
                 .build();
         return cacheManager;
     }
-*/
     /**
      * 自定义缓存的redis的KeyGenerator【key生成策略】
      * 注意: 该方法只是声明了key的生成策略,需在@Cacheable注解中通过keyGenerator属性指定具体的key生成策略

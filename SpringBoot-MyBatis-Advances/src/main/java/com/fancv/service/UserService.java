@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Log4j2
 @EnableCaching
-@CacheConfig(cacheNames = "coffee")
+@CacheConfig(cacheNames = "users")
 public class UserService {
 
     @Autowired
@@ -29,7 +29,7 @@ public class UserService {
         return userMapper.selectByPrimaryKey(id);
     }
 
-    @Cacheable(cacheNames = "cache", sync = true, keyGenerator = "keyGenerator")
+    @Cacheable(cacheNames = "ca", sync = true, keyGenerator = "keyGenerator")
     public User getUerInfoWithoutKey() {
         return userMapper.selectByPrimaryKey(2);
     }
