@@ -2,8 +2,8 @@ spring:
   datasource:
     username: admin
     password: hta@123
-    url: jdbc:mysql://localhost:3306/mysql8_study?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    driver-class-name: com.alibaba.druid.proxy.DruidDriver
+    url: jdbc:mysql://localhost:3306/mysql8_study?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT&zeroDateTimeBehavior=convertToNull
+    driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     # 下面为连接池的补充设置，应用到上面所有数据源中
     # 初始化大小，最小，最大
@@ -28,6 +28,10 @@ spring:
     use-global-data-source-stat: true
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+server:
+  port: 9091
 
-
+mybatis:
+    mapper-locations: classpath:mappers/*Mapper.xml
+    type-aliases-package: com.fancv.dao
 

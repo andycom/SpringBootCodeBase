@@ -1,0 +1,15 @@
+com\fancv\mq\MqConsumerApplication.class
+com\fancv\mq\bean\OrderNotifyEvent.class
+com\fancv\mq\listener\MessageListener$TransactionalConsumer.class
+com\fancv\mq\listener\MessageListener$MyTagConsumer.class
+com\fancv\mq\listener\MessageListener$MyConsumer1.class
+com\fancv\mq\listener\MessageListener$MyAsyncConsumer1.class
+com\fancv\mq\ConsumerService.class
+com\fancv\mq\listener\MessageListener$MyAsyncConsumer2.class
+com\fancv\mq\listener\MessageListener$MyOneWayConsumer.class
+com\fancv\RocketMQConsumerApp.class
+com\fancv\mq\listener\MessageListener$MyAsyncConsumer3.class
+com\fancv\mq\Consumer.class
+com\fancv\mq\listener\MessageListener.class
+com\fancv\mq\listener\MessageListener$MyConsumer2.class
+com\fancv\mq\listener\MessageListener$SycnConsumer.class
