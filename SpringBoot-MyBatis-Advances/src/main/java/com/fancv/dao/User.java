@@ -1,10 +1,9 @@
 package com.fancv.dao;
 
-import org.springframework.stereotype.Component;
-
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
     private Integer id;
 
     private String name;
