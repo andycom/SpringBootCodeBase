@@ -41,7 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 开放/login和/oauth/authorize两个路径的匿名访问。前者用于登录，后者用于换授权码，这两个端点访问的时机都在登录之前。
-     * 设置/login使用表单验证进行登录。
+     * 设置/login使用表单验证进行登录。   未生效
      * @param http
      * @throws Exception
      */
