@@ -2,7 +2,10 @@ package com.fancv.controller;
 
 import com.fancv.dao.User;
 import com.fancv.mapper.MyUserMapper;
+import com.fancv.service.UserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.accept.MappingMediaTypeFileExtensionResolver;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,14 +16,22 @@ import java.util.List;
 
 @RestController
 @RequestMapping("mybatis")
+@Api(value = "User")
 public class DemoController {
+
     @Autowired
     MyUserMapper userMapper;
-    @GetMapping("insert")
-    public String batchInster(){
 
-        User user = userMapper.selectByPrimaryKey(1);
-       return user.getName();
+    @Autowired
+    UserService userService;
+
+
+    @GetMapping("user_info")
+    public User getUserInfo(Integer id){
+
+        User user = userService.getUerInfo(id);
+        User user1 = userService.getUerInfoWithoutKey();
+        return user;
     }
 
     @GetMapping("replace")
@@ -48,6 +59,6 @@ public class DemoController {
         a.setCreateTime(new Date());
         a.setName("dfa");
         a.setPassword("124321");
-        return userMapper.mergeinfo(a);
+        return 1;
     }
 }
