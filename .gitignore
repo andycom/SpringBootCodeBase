@@ -18,3 +18,9 @@ SpringBootCodeBase.iml
 /SpringBoot-LTS/target/
 /logs/
 /springBoot-ShardingJDBC/target/
+/SpringBoot-mybatis-plus/target/
+/SpringBoot-OSS/target/
+/SpringBoot-rocketMQ-producer/
+/SpringBoot-rocketMQ-producer/mq-producer.iml
+/SpringBoot-Security/target/
+/SpringBoot-rocketMQ-consumer/target/
