@@ -32,6 +32,7 @@
         <module>SpringBoot-Commons</module>
         <module>SpringBoot-DynamicDataSource</module>
         <module>SpringBoot-Security</module>
+        <module>SpringBoot-JavaReactor</module>
 
     </modules>
 
