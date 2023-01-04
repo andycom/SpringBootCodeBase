@@ -2,7 +2,9 @@ package com.fancv.ExceptionHandler;
 
 
 import com.alibaba.fastjson.JSONObject;
+import lombok.Data;
 
+@Data
 public class ResultBody {
     /**
      * 响应代码
